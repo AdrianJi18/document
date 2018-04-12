@@ -1,0 +1,3 @@
+1.使用mybatis-generator  自动生成代码
+由于MyBatis属于一种半自动的ORM框架，所以主要的工作将是书写Mapping映射文件，但是由于手写映射文件很容易出错，mybatis-gennerator插件帮我们自动生成mybatis所需要的dao、bean、mapper xml文件。
+右击工程，maven build，添加命令mybatis-generator:generate

@@ -1,0 +1,25 @@
+﻿1.Tomcat启动时，
+  （1）报错：class path resource [config/spring/springmvc.xml] cannot be opened because it does not exist
+  错误原因：找不到springmvc.xml 文件
+  解决办法：“classpath*:springmvc.xml”
+  （2）报错：java.lang.IllegalArgumentException: Invalid 'log4jConfigLocation' parameter: class path resource [com/bypay/config/log4j.properties] cannot be resolved to URL because it does not exist
+  错误原因：未引进jre
+  解决办法： properties---Java build path ---add    jre
+             jre 版本号要和Java compiler一致。
+  
+2.一个很傻逼的问题：
+  在controller里引用的是service接口，而不是实现类
+
+3.在Project Facets里面修改Dynamic web module为2.5的时候就会出现Cannot change version of project facet Dynamic web module to 2.5
+
+在navigator（window---show view ---Navigator）下 打开项目.settings目录下org.eclipse.wst.common.component，(将1.5改成1.6）
+
+打开org.eclipse.wst.common.project.facet.core.xml，把  <installed facet="jst.web" version="3.0"/>改成  <installed facet="jst.web" version="2.5"/>
+
+4.timestamp类型在你不给它赋值时，自动赋最近的时间
+
+5.在mapper.xml 中，resultMap是自己定义的，用的时候，用其id
+resultType  可以是单个类型，对象和map、list等
+尤其注意 java.lang.Integer 不是java.lang.INTEGER  
+
+6.src/main/java(missing)  加入jre
